@@ -13,7 +13,6 @@ test('Deve listar todos os usuários', () => {
 });
 
 test('Deve inserir usuário com sucesso', () => {
-  const mail = `${Date.now()}@mail.com`;
   return request(app).post('/users')
     .send({ name: 'Walter Mitty', email: mail, passwd: '123456' })
     .then((res) => {
