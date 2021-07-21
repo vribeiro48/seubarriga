@@ -2,6 +2,8 @@ const request = require('supertest');
 
 const app = require('../../src/app');
 
+const mail = `${Date.now()}@mail.com`;
+
 test('Deve listar todos os usuários', () => {
   return request(app).get('/users')
     .then((res) => {
